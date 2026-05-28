@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Product Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Fake Product Identification System</h1>
+
+    <input type="text" id="name" placeholder="Product Name">
+    <input type="text" id="brand" placeholder="Brand Name">
+    <input type="text" id="code" placeholder="Product Code">
+    <input type="text" id="seller" placeholder="Seller Name">
+
+    <button onclick="checkProduct()">Verify Product</button>
+
+    <h2 id="result"></h2>
+
+    <hr>
+
+    <h3>OR Scan QR Code</h3>
+
+    <button onclick="startScan()">Start Scan</button>
+
+    <div id="reader" style="width:300px;"></div>
+
+    <p id="scanResult"></p>
+
+</div>
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
