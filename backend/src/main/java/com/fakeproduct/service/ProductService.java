@@ -3,30 +3,51 @@ package com.fakeproduct.service;
 import com.fakeproduct.model.Product;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.List;
-
 @Service
 public class ProductService {
 
-    private final List<String> validBrands = Arrays.asList(
-            "Apple", "Samsung", "Nike", "Adidas", "Sony"
-    );
-
     public String verify(Product product) {
 
-        boolean brandOk = validBrands.contains(product.getBrand());
+        if(product.getProductName()==null || product.getProductName().isBlank())
+            return "❌ Enter Product Name";
 
-        boolean codeOk = product.getProductCode() != null
-                && product.getProductCode().length() >= 8;
+        if(product.getBrand()==null || product.getBrand().isBlank())
+            return "❌ Enter Brand Name";
 
-        boolean sellerOk = product.getSeller() != null
-                && !product.getSeller().equalsIgnoreCase("unknown");
+        if(product.getProductCode()==null || product.getProductCode().isBlank())
+            return "❌ Enter Product Code";
 
-        if (brandOk && codeOk && sellerOk) {
-            return "✅ Likely Genuine Product";
-        } else {
-            return "❌ Warning: Possibly Fake Product";
+        if(product.getSeller()==null || product.getSeller().isBlank())
+            return "❌ Enter Seller Name";
+
+        if(product.getProductCode().matches("\\d{8,14}")) {
+
+            return """
+            ✅ Product Verification Report
+
+            Product Name : %s
+            Brand : %s
+            Product Code : %s
+            Seller : %s
+
+            Status : Product appears Genuine.
+
+            Note:
+            This verification is based on product information validation.
+            """.formatted(
+                    product.getProductName(),
+                    product.getBrand(),
+                    product.getProductCode(),
+                    product.getSeller());
+
         }
+
+        return """
+        ⚠ Verification Failed
+
+        Product Code is invalid.
+
+        Product may be fake or incorrectly entered.
+        """;
     }
 }

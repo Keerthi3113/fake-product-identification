@@ -7,28 +7,47 @@
 
 <body>
 
-<div class="container">
+<h1 class="title">Fake Product Identification System</h1>
 
-    <h1>Fake Product Identification System</h1>
+<div class="main-container">
 
-    <input type="text" id="name" placeholder="Product Name">
-    <input type="text" id="brand" placeholder="Brand Name">
-    <input type="text" id="code" placeholder="Product Code">
-    <input type="text" id="seller" placeholder="Seller Name">
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
 
-    <button onclick="checkProduct()">Verify Product</button>
+        <h2>Product Details</h2>
 
-    <h2 id="result"></h2>
+        <input type="text" id="name" placeholder="Product Name">
 
-    <hr>
+        <input type="text" id="brand" placeholder="Brand Name">
 
-    <h3>OR Scan QR Code</h3>
+        <input type="text" id="code" placeholder="Product Code">
 
-    <button onclick="startScan()">Start Scan</button>
+        <input type="text" id="seller" placeholder="Seller Name">
 
-    <div id="reader" style="width:300px;"></div>
+        <button onclick="checkProduct()">Verify Product</button>
 
-    <p id="scanResult"></p>
+        <hr>
+
+        <h3>Scan QR Code</h3>
+
+        <button onclick="startScan()">Start Scan</button>
+
+        <div id="reader"></div>
+
+        <p id="scanResult"></p>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+<div class="result-box">
+
+    <h2>Verification Report</h2>
+
+    <div id="result">
+        <p>Your verification result will appear here.</p>
+    </div>
+
+</div>
 
 </div>
 

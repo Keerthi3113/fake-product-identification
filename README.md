@@ -2,51 +2,52 @@
 
 ## 📌 Overview
 
-The **Fake Product Identification System** is a full-stack web application developed to help users identify whether a product is likely to be genuine or fake. The application allows users to manually enter product details or scan a QR code using their device camera. The entered information is sent to a Java Spring Boot backend, where validation rules are applied to determine whether the product is likely genuine or suspicious.
+The **Fake Product Identification System** is a full-stack web application developed using **Spring Boot, Java, HTML, CSS, and JavaScript**. It helps users verify whether a product appears genuine by validating the product details entered manually or obtained by scanning a QR code.
 
-This project was developed as a **college hackathon mini project** to demonstrate the integration of frontend technologies with a Java backend.
+The system provides a clean and interactive user interface with a verification report, making it suitable as an academic mini project.
 
 ---
 
-# ✨ Features
+## ✨ Features
 
 - Product verification using product details
-- QR Code scanning using device camera
+- QR Code scanning using the device camera
+- Verification report displayed in a separate panel
+- Responsive and modern user interface
 - REST API using Spring Boot
-- Responsive user interface
-- Instant verification result
-- Simple rule-based fake product detection
-- Easy to understand project structure
+- Rule-based product validation
+- Easy-to-understand project structure
+- Fast verification results
 
 ---
 
-# 🛠 Technologies Used
+## 🛠️ Technologies Used
 
-## Frontend
+### Frontend
 
 - HTML5
 - CSS3
 - JavaScript
 - HTML5 QR Code Library
 
-## Backend
+### Backend
 
 - Java
 - Spring Boot
 - Maven
 - REST API
 
-## Tools
+### Tools
 
 - Visual Studio Code
 - IntelliJ IDEA / Spring Tool Suite
 - Git
 - GitHub
-- Postman (API Testing)
+- Postman
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
 FakeProductIdentification
@@ -58,69 +59,56 @@ FakeProductIdentification
 │   │   │   │   └── com
 │   │   │   │       └── fakeproduct
 │   │   │   │           ├── controller
-│   │   │   │           │      ProductController.java
-│   │   │   │           ├── service
-│   │   │   │           │      ProductService.java
+│   │   │   │           │   └── ProductController.java
 │   │   │   │           ├── model
-│   │   │   │           │      Product.java
+│   │   │   │           │   └── Product.java
+│   │   │   │           ├── service
+│   │   │   │           │   └── ProductService.java
 │   │   │   │           └── BackendApplication.java
 │   │   │   └── resources
-│   │   │          application.properties
+│   │   │       └── application.properties
 │   │   └── test
 │   └── pom.xml
 │
-└── frontend
-    ├── index.html
-    ├── style.css
-    └── script.js
+├── frontend
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+└── README.md
 ```
 
 ---
 
-# ⚙️ Installation
+## 🚀 How to Run
 
-## Step 1
-
-Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/Keerthi3113/fake-product-identification.git
 ```
 
----
-
-## Step 2
-
-Open the project
+### Navigate to the backend folder
 
 ```bash
-cd fake-product-identification
+cd FakeProductIdentification/backend
 ```
 
----
-
-## Step 3
-
-Run the Spring Boot Backend
+### Run the Spring Boot application
 
 ```bash
-cd backend
 mvn spring-boot:run
 ```
 
-Backend will start at
+The backend will start at:
 
 ```
 http://localhost:8080
 ```
 
----
+### Open the frontend
 
-## Step 4
-
-Run Frontend
-
-Open
+Open:
 
 ```
 frontend/index.html
@@ -128,128 +116,32 @@ frontend/index.html
 
 using **Live Server** in Visual Studio Code.
 
-Frontend runs at
+---
 
-```
-http://127.0.0.1:5500
-```
+## 📖 How to Use
+
+1. Enter the product details.
+2. Or scan the product QR code.
+3. Click **Verify Product**.
+4. The verification report will appear on the right side.
+5. The system displays whether the product appears genuine based on validation rules.
 
 ---
 
-# 🚀 How the System Works
+## 🔮 Future Enhancements
 
-### Manual Verification
-
-1. Enter Product Name
-2. Enter Brand Name
-3. Enter Product Code
-4. Enter Seller Name
-5. Click **Verify Product**
-6. Result is displayed
-
----
-
-### QR Code Verification
-
-1. Click **Start Scan**
-2. Allow camera permission
-3. Scan product QR code
-4. Product code is filled automatically
-5. Click **Verify Product**
-6. Verification result is displayed
+- Database integration (MySQL)
+- Barcode verification
+- AI/ML-based fake product detection
+- Manufacturer API integration
+- User authentication
+- Product history tracking
+- Image recognition for products
 
 ---
 
-# 🔗 REST API
+## 👩‍💻 Developed By
 
-### Verify Product
+**Inavalli Guna Lalitha Keerthi**
 
-**POST**
-
-```
-http://localhost:8080/verify
-```
-
-### Sample Request
-
-```json
-{
-    "productName":"Nike Shoes",
-    "brand":"Nike",
-    "productCode":"NIKE123456",
-    "seller":"Amazon"
-}
-```
-
-### Sample Response
-
-```
-Likely Genuine Product
-```
-
-or
-
-```
-Warning: Possibly Fake Product
-```
-
----
-
-# 📷 Project Screenshots
-
-You can add screenshots here after running the project.
-
-Example:
-
-```
-screenshots/
-
-Home Page
-
-QR Scanner
-
-Verification Result
-```
-
----
-
-# 🔮 Future Enhancements
-
-- MySQL Database Integration
-- Machine Learning based fake detection
-- Blockchain product authentication
-- Admin Dashboard
-- User Login System
-- Product History
-- Mobile Application
-- Barcode Scanner
-- Email Notification
-
----
-
-# 🎯 Applications
-
-- E-Commerce Platforms
-- Pharmaceutical Industry
-- Electronics Industry
-- Fashion Products
-- FMCG Products
-- Luxury Goods Authentication
-
----
-
-# 👨‍💻 Developed By
-
-**Guna Lalitha Keerthi Inavalli**
-
-Bachelor of Technology (B.Tech)
-
----
-
-# 📜 License
-
-This project is developed for educational and learning purposes.
-
----
-
-## ⭐ If you like this project, consider giving it a Star on GitHub.
+Mini Project – Fake Product Identification System

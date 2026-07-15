@@ -16,8 +16,34 @@ function checkProduct() {
     })
     .then(res => res.text())
     .then(data => {
-        document.getElementById("result").innerText = data;
-    });
+
+    document.getElementById("result").innerHTML = `
+
+    <h3 style="color:green;">✔ Verification Completed</h3>
+
+    <hr>
+
+    <p><b>Product Name :</b> ${product.productName}</p>
+
+    <p><b>Brand :</b> ${product.brand}</p>
+
+    <p><b>Product Code :</b> ${product.productCode}</p>
+
+    <p><b>Seller :</b> ${product.seller}</p>
+
+    <hr>
+
+    <h2>${data}</h2>
+
+    <hr>
+
+    <p>
+    This verification is performed using product information
+    entered by the user.
+    </p>
+
+    `;
+});
 }
 
 
