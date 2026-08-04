@@ -7,7 +7,10 @@ The **Fake Product Identification System** is a full-stack web application devel
 The system provides a clean and interactive user interface with a verification report, making it suitable as an academic mini project.
 
 ---
+## 🚀 Live Demo
+🔗 https://keerthi3113.github.io/fake-product-identification/
 
+---
 ## ✨ Features
 
 - Product verification using product details
